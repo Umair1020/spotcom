@@ -1,0 +1,1071 @@
+:root {
+  --initHeaderBackground: rgba(255, 255, 255, 0);
+  --headerBackground: rgba(255, 255, 255, 0.9);
+  --headerBackgroundHover: rgba(255, 255, 255, 1);
+  --headerTextLinkColor: rgba(43, 0, 96, 1);
+  --headerTextLinkNotHoverColor: rgba(43, 0, 96, 0.5);
+  --headerTextCatTitle: #58595b;
+  --headerHamburgerColor: rgba(0, 0, 0, 1);
+  --headerLanguageBackground: rgba(0, 0, 0, 0.1);
+  --headerMobileArrowColor: rgba(43, 0, 96, 1);
+  --headerDropdownLayerBgColor: rgba(255, 255, 255, 0.1)
+}
+
+[data-homepage="false"] {
+  --initHeaderBackground: rgba(255, 255, 255, 1)
+}
+
+.dark {
+  --initHeaderBackground: rgba(0, 0, 0, 0);
+  --headerBackground: rgba(0, 0, 0, 0.9);
+  --headerBackgroundHover: rgba(0, 0, 0, 1);
+  --headerTextLinkColor: rgba(255, 255, 255, 1);
+  --headerTextLinkNotHoverColor: rgba(255, 255, 255, 0.5);
+  --headerTextCatTitle: rgba(255, 255, 255, 1);
+  --headerHamburgerColor: rgba(255, 255, 255, 1);
+  --headerLanguageBackground: rgba(255, 255, 255, 0.2);
+  --headerMobileArrowColor: rgba(255, 255, 255, 1);
+  --headerDropdownLayerBgColor: rgba(255, 255, 255, 0.1)
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  padding: 0;
+  /*! box-shadow: 0 0 6px 6px; */
+  background: rgba(0, 0, 0, 0);
+  position: fixed;
+  top: 0;
+  z-index: 999999999997;
+  transition: background .3s ease-in-out, top .3s ease-in-out
+}
+
+.opaque-header {
+  background: var(--headerBackground)
+}
+
+.header[data-bg-transparency="false"] {
+  background: var(--headerBackground)
+}
+
+.header.scrolling {
+  background: var(--headerBackground)
+}
+
+.header:hover,
+.header.dropdown-open,
+.navOpen .header {
+  background: var(--headerBackgroundHover)
+}
+
+.header.dropdown-open {
+  top: 0 !important
+}
+
+.header.dropdown-open:before {
+  content: "";
+  position: fixed;
+  top: var(--initHeaderHeight);
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  background: var(--headerDropdownLayerBgColor)
+}
+
+.header .container {
+  max-width: 1600px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 110px;
+  position: relative
+}
+
+.header .container:before,
+.header .container:after {
+  display: none
+}
+
+.header .container .logo {
+  /* width: 10%;
+  max-width: 100px; */
+  position: relative
+}
+
+.header .container .logo span {
+  position: absolute;
+  top: 50%;
+  left: 110%;
+  transform: translate(0, -50%);
+  width: 200px;
+  font-family: var(--pnsb);
+  font-size: 18px
+}
+
+.header .container .logo img {
+  width: 100%
+}
+
+.header .container .logo.sml_cresent img {
+  width: 78px
+}
+
+.header .container .logo.only_text img {
+  width: 67px
+}
+
+.header .container .logo.only_text img {
+  width: 67px
+}
+
+.header .container .navigation {
+  height: 100%
+}
+
+.header .container .navigation ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: 0;
+  padding: 0;
+  height: 100%
+}
+
+.header .container .navigation ul li {
+  padding: 0 25px;
+  font-size: 18px;
+  font-family: var(--pnsb);
+  height: 100%;
+  position: relative
+}
+
+.header .container .navigation ul li a {
+  color: var(--headerTextLinkColor);
+  transition: color .3s ease-in-out;
+  height: 100%;
+  display: flex;
+  align-items: center
+}
+
+.header .container .navigation ul li:hover a {
+  text-decoration: underline
+}
+
+.header .container .navigation ul:hover li a {
+  color: var(--headerTextLinkNotHoverColor)
+}
+
+.header .container .navigation ul:hover li:hover a {
+  color: var(--headerTextLinkColor)
+}
+
+.header .container .navigation .dropdown-subnav {
+  background: var(--headerBackgroundHover);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 110px);
+  padding: 20px 50px 10px;
+  width: auto;
+  display: none;
+  z-index: 1;
+  border-radius: 0 0 10px 10px
+}
+
+.header .container .navigation .dropdown-subnav .col {
+  min-width: 350px;
+  padding: 0;
+  width: 100%;
+  line-height: 1.3
+}
+
+header .container .navigation ul li.column-4,
+header .container .navigation ul li.column-3 {
+  position: static
+}
+
+.header .container .navigation li .dropdown-subnav .col a {
+  height: auto;
+  font-family: var(--pnr);
+  text-decoration: none;
+  line-height: 1.3;
+  margin: 0 0 15px;
+  position: relative;
+  width: auto
+}
+
+.header .container .navigation li .dropdown-subnav .col a:hover {
+  text-decoration: underline
+}
+
+.header .container .navigation li .dropdown-subnav .col a.catTitle {
+  font-family: var(--pnsb);
+  color: var(--headerTextCatTitle);
+  cursor: default;
+  text-decoration: none
+}
+
+.header .container .navigation li .dropdown-subnav .col a.catTitle[href] {
+  cursor: pointer;
+  color: var(--headerTextLinkColor)
+}
+
+.header .container .navigation li .dropdown-subnav .col a:hover.catTitle[href] {
+  text-decoration: underline
+}
+
+.header .container .navigation li .dropdown-subnav .col.hasCategory a:not(.catTitle) {
+  margin: 0 0 15px 20px
+}
+
+.header .container .navigation li .dropdown-subnav .col.hasCategory a:not(.catTitle):before {
+  content: "•";
+  display: block;
+  margin: 0 10px 7px 0;
+  font-size: 24px;
+  text-decoration: none;
+  position: absolute;
+  left: -20px;
+  line-height: -0.5
+}
+
+.header .container .navigation li:hover.column-3 .dropdown-subnav .col {
+  width: 33%
+}
+
+.header .container .navigation li:hover.column-2 .dropdown-subnav .col {
+  width: 50%
+}
+
+.header .container .navigation li:hover.column-1 .dropdown-subnav {
+  width: 300px
+}
+
+.header .container .navigation li:hover.column-1 .dropdown-subnav .col {
+  width: 100%
+}
+
+.header .container .extraHeaderOptions {
+  display: flex
+}
+
+.header .container .extraHeaderOptions>div {
+  display: flex;
+  margin: 0 0 0 15px;
+  align-items: center
+}
+
+.searchOpen .header .container .extraHeaderOptions>div.search {
+  width: 20px
+}
+
+.searchOpen .header .container .extraHeaderOptions>div.search img {
+  opacity: 0
+}
+
+.searchOpen .header .container .extraHeaderOptions>div.search a {
+  position: relative
+}
+
+.searchOpen .header .container .extraHeaderOptions>div.search a:before,
+.searchOpen .header .container .extraHeaderOptions>div.search a:after {
+  content: "";
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #360d69;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg)
+}
+
+.searchOpen .header .container .extraH eaderOptions>div.search a:after {
+  transform: translate(-50%, -50%) rotate(-45deg)
+}
+
+.header .container .extraHeaderOptions>div.hamburger {
+  display: none
+}
+
+.header .container .geographies a img {
+  pointer-events: none;
+  width: 25px
+}
+
+.header .container .geographies .dropdown-subnav {
+  background: var(--headerBackgroundHover);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 110px);
+  padding: 20px 50px 10px;
+  width: auto;
+  z-index: 1;
+  border-radius: 0 0 10px 10px;
+  display: none;
+  flex-direction: row;
+  font-size: 18px
+}
+
+.header .container .geographies .dropdown-subnav .col {
+  min-width: 340px;
+  line-height: 1.3;
+  width: 100%
+}
+
+.header .container .geographies .dropdown-subnav .col a {
+  height: auto;
+  font-family: var(--pnr);
+  text-decoration: none;
+  line-height: 1.3;
+  position: relative;
+  width: auto;
+  color: var(--headerTextLinkColor)
+}
+
+.header .container .geographies .dropdown-subnav .col a:hover {
+  text-decoration: underline
+}
+
+.header .container .geographies .dropdown-subnav .col a.catTitle {
+  font-family: var(--pnsb);
+  color: var(--headerTextCatTitle);
+  cursor: default;
+  text-decoration: none;
+  display: flex;
+  margin: 0;
+  line-height: 1;
+  align-items: center
+}
+
+.header .container .geographies .dropdown-subnav .col a.catTitle[href] {
+  cursor: pointer;
+  color: var(--headerTextLinkColor)
+}
+
+.header .container .geographies .dropdown-subnav .col a:hover.catTitle[href] {
+  text-decoration: underline;
+  cursor: pointer
+}
+
+.header .container .geographies .dropdown-subnav .col p>a:not(.catTitle) {
+  margin: 0
+}
+
+.header .container .geographies .dropdown-subnav .col a:not(.catTitle):before {
+  content: "•";
+  display: block;
+  margin: 0 10px 7px 0;
+  font-size: 24px;
+  text-decoration: none;
+  position: absolute;
+  left: -20px;
+  line-height: -0.5;
+  display: none
+}
+
+.header .container .geographies .dropdown-subnav .col p {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-family: var(--pnr);
+  flex-direction: c
+}
+
+.header .container .geographies .dropdown-subnav .col p.noSubRegion {
+  margin: 20px 0 0
+}
+
+.header .container .geographies .dropdown-subnav .col .countryContainer {
+  display: flex;
+  margin: 0 0 10px
+}
+
+.header .container .geographies .dropdown-subnav .col div .geoLinkContainer a.geoLinks {
+  margin: 0;
+  background: 0;
+  border-right: 1px solid #000;
+  border-radius: unset;
+  height: unset;
+  padding: 0 5px
+}
+
+.header .container .geographies .dropdown-subnav .col div .geoLinkContainer a.geoLinks:last-child {
+  border: 0
+}
+
+.header .container .geographies .dropdown-subnav .col div .geoLinkContainer {
+  font-size: 14px;
+  margin: 0 0 0 10px;
+  display: block;
+  padding: 0;
+  display: flex;
+  align-self: center
+}
+
+.header .container .geographies .dropdown-subnav .col div .geoLinkContainer a {
+  margin: 0 5px 0 0;
+  padding: 5px 10px;
+  background: var(--headerLanguageBackground);
+  border-radius: 15px;
+  display: inline-block;
+  line-height: 1
+}
+
+.header .container .geographies .dropdown-subnav .col div a.catTitle+.geoLinkContainer {
+  margin: 0 0 0 5px;
+  padding: 0
+}
+
+.header .container .geographies .dropdown-subnav .col img {
+  margin: 0 10px 0 0;
+  display: none
+}
+
+.header .container .extraHeaderOptions>div.geographies>a {
+  padding: 2px;
+  border-radius: 2px;
+  transition: border .5s ease-in-out;
+  border: 1px solid transparent
+}
+
+.header .container .extraHeaderOptions>div.geographies>a.active {
+  border: 1px solid #000
+}
+
+.mobileGeo {
+  display: none
+}
+
+.header .container .extraHeaderOptions>div.searchPopup {
+  position: fixed;
+  top: 110px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 110px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  margin: 0;
+  display: none
+}
+
+.header .container .extraHeaderOptions>div.searchPopup .searchContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%
+}
+
+.header .container .extraHeaderOptions>div.searchPopup .input-field {
+  position: relative;
+  width: 60%
+}
+
+.header .container .extraHeaderOptions>div.searchPopup .input-field input {
+  border: 1px solid #ccc;
+  padding: 20px 80px 20px 40px;
+  font-family: var(--pnr);
+  width: 100%;
+  border-radius: 40px;
+  font-size: 24px
+}
+
+.header .container .extraHeaderOptions>div.searchPopup .input-field input::placeholder {
+  line-height: 1
+}
+
+.header .container .extraHeaderOptions>div.searchPopup .input-field button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80px;
+  height: 100%;
+  /* background: url(../../content/dam/nexus/staticsites/homepage/header/icon-search-white.png) no-repeat center / 40% #341a54; */
+  border: 0;
+  border-radius: 0 40px 40px 0
+}
+
+.header .container .navigation .column-1 .dropdown-subnav .col {
+  min-width: 150px
+}
+
+@media screen and (max-width: 1440px) {
+
+  .header .container .navigation .dropdown-subnav .col,
+  .header .container .geographies .dropdown-subnav .col {
+    min-width: 310px;
+    padding: 0 20px 0 0
+  }
+}
+
+@media screen and (max-width: 1366px) {
+
+  .header .container .navigation .dropdown-subnav .col,
+  .header .container .geographies .dropdown-subnav .col {
+    min-width: 290px;
+    padding: 0 20px 0 0
+  }
+}
+
+@media screen and (max-width: 1280px) {
+
+  .header .container .navigation .dropdown-subnav .col,
+  .header .container .geographies .dropdown-subnav .col {
+    min-width: 270px;
+    padding: 0 20px 0 0
+  }
+
+  header .container .navigation ul li.column-2 {
+    position: static
+  }
+}
+
+@media screen and (max-width: 1152px) {
+
+  .header .container .navigation .dropdown-subnav .col,
+  .header .container .geographies .dropdown-subnav .col {
+    min-width: 240px;
+    padding: 0 20px 0 0
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .header {
+    --initHeaderBackground: rgba(255, 255, 255, 0.9)
+  }
+
+  .dark {
+    --initHeaderBackground: rgba(255, 255, 255, 0.2)
+  }
+
+  .header .container {
+    min-height: auto;
+    padding: 10px 12px;
+    justify-content: space-between !important;
+  }
+
+  .header .container .logo {
+    width: 100px
+  }
+
+  .header .container .extraHeaderOptions>div.hamburger {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center
+  }
+
+  .header .container .extraHeaderOptions>div.hamburger span,
+  .header .container .extraHeaderOptions>div.hamburger span:before,
+  .header .container .extraHeaderOptions>div.hamburger span:after {
+    background: var(--headerHamburgerColor);
+    width: 100%;
+    height: 2px;
+    display: block;
+    position: relative
+  }
+
+  .header .container .extraHeaderOptions>div.hamburger span:before,
+  .header .container .extraHeaderOptions>div.hamburger span:after {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translate(-50%, 0)
+  }
+
+  .header .container .extraHeaderOptions>div.hamburger span:after {
+    top: 8px
+  }
+
+  .navOpen .header .container .extraHeaderOptions>div.hamburger span:before,
+  .navOpen .header .container .extraHeaderOptions>div.hamburger span:after {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg)
+  }
+
+  .navOpen .header .container .extraHeaderOptions>div.hamburger span:after {
+    transform: translate(-50%, -50%) rotate(-45deg)
+  }
+
+  .navOpen .header .container .extraHeaderOptions>div.hamburger span {
+    background: 0
+  }
+
+  .header .container .navigation {
+    display: flex;
+    position: fixed;
+    top: 81vh;
+    z-index: 20;
+    background: var(--headerBackgroundHover);
+    height: 100vh;
+    width: 100%;
+    left: 0;
+    overflow-y: scroll;
+    padding: 5vw
+  }
+
+  .header .container .navigation ul {
+    flex-direction: column;
+    width: 100%;
+    justify-content: flex-start
+  }
+
+  .header .container .navigation ul li {
+    height: auto;
+    padding: 10px 0;
+    margin: 0
+  }
+
+  .header .container .navigation ul li a {
+    height: auto;
+    width: 100%;
+    font-size: 20px
+  }
+
+  .header .container .navigation ul:hover li a {
+    color: var(--headerTextLinkColor)
+  }
+
+  .header .container .navigation>ul>li>a:not(:only-child):after {
+    content: "";
+    display: flex;
+    border: 2px solid var(--headerMobileArrowColor);
+    border-width: 2px 2px 0 0;
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
+    margin: 0 0 0 10px
+  }
+
+  .header .container .navigation>ul>li.active>a:not(:only-child):after {
+    transform: rotate(135deg)
+  }
+
+  .header .container .navigation li.active .dropdown-subnav {
+    background-color: var(--initHeaderBackground);
+    border-radius: 10px;
+    display: none;
+    position: relative;
+    box-shadow: none;
+    flex-direction: column;
+    left: unset;
+    transform: unset;
+    padding: 15px
+  }
+
+  .header .container .navigation li .dropdown-subnav .col a.catTitle {
+    margin: 30px 0 15px
+  }
+
+  .header .container .extraHeaderOptions>div.geographies {
+    display: none
+  }
+
+  .header .container .extraHeaderOptions>div.geographies {
+    display: block;
+    position: fixed;
+    bottom: -10vh;
+    width: 100%;
+    z-index: 20;
+    padding: 20px;
+    left: 0;
+    margin: 0;
+    box-shadow: 0 0 4px 0 #ccc;
+    background: var(--headerBackgroundHover);
+    transition: bottom .5s ease-in-out
+  }
+
+  .navOpen .header .container .extraHeaderOptions>div.geographies {
+    bottom: 0
+  }
+
+  .header .container .extraHeaderOptions>div.geographies>a {
+    display: none
+  }
+
+  .header .container .extraHeaderOptions>div.geographies>a.mobileGeo {
+    display: block;
+    color: var(--headerTextLinkColor);
+    padding: 0;
+    border: 1px solid transparent
+  }
+
+  .header .container .extraHeaderOptions>div.geographies>a.mobileGeo img {
+    margin: 0 10px 0 0;
+    width: 25px
+  }
+
+  .header .container .geographies .dropdown-subnav {
+    position: fixed;
+    top: unset;
+    bottom: 0;
+    transform: translate(-50%, 0);
+    overflow-x: scroll;
+    padding: 20px -28px 20px;
+    flex-direction: column;
+    width: 100%
+  }
+
+  .header .container .geographies .dropdown-subnav .col {
+    margin: 0 0 20px
+  }
+
+  ::-webkit-scrollbar {
+    -webkit-appearance: none
+  }
+
+  ::-webkit-scrollbar:vertical {
+    width: 12px
+  }
+
+  ::-webkit-scrollbar:horizontal {
+    height: 12px
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    border: 2px solid #fff
+  }
+
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #fff
+  }
+
+  .header .container .geographies .dropdown-subnav:before {
+    display: none
+  }
+
+  .header.dropdown-open:before {
+    display: none
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header .container .navigation .dropdown-subnav .col {
+    padding: 0;
+    width: 100% !important
+  }
+
+  .header .container .navigation .dropdown-subnav .col:last-child {
+    padding: 0
+  }
+
+  .header .container .navigation li .dropdown-subnav {
+    padding: 10px 0 20px
+  }
+
+  .header .container .navigation li .dropdown-subnav .col.hasCategory a:not(.catTitle) {
+    margin: 0 0 10px 20px
+  }
+
+  .header .container .navigation li .dropdown-subnav .col a {
+    font-size: 16px
+  }
+
+  .header .container .navigation li .dropdown-subnav .col a.catTitle {
+    margin: 0 0 10px
+  }
+
+  .header .container .navigation ul li a {
+    font-size: 20px
+  }
+
+  .header .container .extraHeaderOptions>div.searchPopup .input-field {
+    width: 94%
+  }
+
+  .header .container .extraHeaderOptions>div.searchPopup .input-field input {
+    padding: 10px 60px 10px 30px
+  }
+
+  /* .header .container .extraHeaderOptions>div.searchPopup .input-field button {
+      background: url(../../content/dam/nexus/staticsites/homepage/header/icon-search-white.png) no-repeat center / auto #341a54;
+      width: 60px
+  } */
+
+  .searchOpen .header .container .extraHeaderOptions>div.search {
+    width: auto;
+    height: auto
+  }
+}
+
+
+.bannerh2 h2 {
+  font-family: Poppins;
+  font-weight: bold;
+  font-size: 65px;
+  color: #444F6B;
+}
+
+.banner4 h3 {
+  font-size: 35px;
+  line-height: 40px;
+  font-weight: normal;
+  font-family: Poppins;
+  color: #444F6B;
+}
+
+.input {
+  border: 1px solid #000;
+  width: 40%;
+  padding: 10px;
+  margin: auto;
+}
+
+.checkbox {
+  text-align: center;
+  margin: auto !important;
+  float: none !important;
+
+
+}
+
+.form-check-input {
+  border: 1px solid #000;
+
+
+  float: none !important;
+  margin: auto !important;
+
+}
+
+.btns2 {
+  width: 100px;
+  margin: auto;
+  padding: 15px;
+  border-radius: 20px;
+}
+.banner{
+  background: url(../public/video.mp4);
+  position: absolute;
+}
+@media (max-width:991px) {
+  .input {
+    width: 80%;
+  }
+
+  .banner4 h3 {
+    font-size: 25px;
+  }
+
+  .checkbox {
+    text-align: start;
+    margin: none !important;
+  }
+
+  .form-check-input {
+    border: 1px solid #000;
+
+
+    margin: none !important;
+
+
+  }
+
+  .parent {
+    height: 775vh !important;
+  }
+
+  .banner3 {
+    background: #222222;
+    display: block !important;
+    height: auto !important;
+
+  }
+
+  .heading .h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .heading p {
+    font-size: 10px;
+    text-align: center;
+  }
+
+  .banner3 .heading {
+    display: grid;
+    justify-content: center;
+  }
+
+  .bannerh2 h2 {
+    font-family: Poppins;
+    font-weight: bold;
+    font-size: 35px;
+    color: #444F6B;
+  }
+
+  .bannerh2 p {
+    font-family: Poppins;
+    font-weight: normal;
+    font-size: 20px;
+    color: #444F6B;
+  }
+
+  #section05 a {
+    display: none;
+  }
+
+  #section05 a span {
+    display: none;
+  }
+}
+
+.bannerh2 p {
+  font-family: Poppins;
+  font-weight: normal;
+  font-size: 20px;
+  color: #444F6B;
+}
+
+.conatiner {
+  overflow-x: hidden;
+}
+
+.btns {
+  background-color: #9578AD;
+  color: #fff;
+  border-radius: 20px;
+  padding: 10px;
+  border: none;
+}
+
+.banner {
+  background-color: #EAE6E6;
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 110px;
+  position: relative;
+}
+
+
+
+
+
+
+
+.demo a {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  z-index: 2;
+  display: inline-block;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  color: #fff;
+  font: normal 400 20px/1 'Josefin Sans', sans-serif;
+  letter-spacing: .1em;
+  text-decoration: none;
+  transition: opacity .3s;
+}
+
+.demo a:hover {
+  opacity: .5;
+}
+
+
+
+
+
+.parent {
+  overflow-x: hidden;
+  height: auto;
+}
+
+#section05 a {
+  padding-top: 70px;
+}
+
+#section05 a span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: sdb05 1.5s infinite;
+  animation: sdb05 1.5s infinite;
+  box-sizing: border-box;
+}
+
+@-webkit-keyframes sdb05 {
+  0% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: rotate(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
+}
+
+@keyframes sdb05 {
+  0% {
+    transform: rotate(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: rotate(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
+}
+
+
+.banner3 {
+  background: #222222;
+  display: flex;
+  justify-content: center;
+
+  height: 50vh;
+  align-items: center;
+}
+
+.banner3 .heading {
+  display: grid;
+  justify-content: center;
+}
+
+.heading h2 {
+  color: #fff;
+  font-family: Poppins;
+  font-weight: bold;
+  font-size: 50px;
+}
+
+
+.banner3 p {
+  color: #fff;
+}
