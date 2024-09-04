@@ -202,8 +202,22 @@ const Landingpage = () => {
         <>
             <Desktop>
                 <div className='parent'>
-                    {/* <Navbar /> */}
-                    {/* <Header /><br /><br /><br /> */}
+
+
+                    {/* <Header /> */}
+                    {/* <video autoPlay muted loop className='banner-video' style={{
+                            position: 'absolute',
+                            top: '70px',
+                            left: '0',
+                            width: '100%',
+                            height: '100%',
+                            objectFit: 'cover',
+                            zIndex: 1
+                        }}>
+                            <source src='/video1.mp4' type='video/mp4' />
+
+                        </video> */}
+
                     <header
                         className="header opaque-header"
                         data-bgcolor-subpage=""
@@ -253,28 +267,28 @@ const Landingpage = () => {
                                                     style={{}}
                                                     target="_self"
                                                 >
-                                                    Applications
+                                                    Business Solution
                                                 </a>
                                                 <a
                                                     href="/ai/"
                                                     style={{}}
                                                     target="_self"
                                                 >
-                                                    Artificial Intelligence
+                                                    Cyber Security
                                                 </a>
                                                 <a
                                                     href="/business-process/"
                                                     style={{}}
                                                     target="_self"
                                                 >
-                                                    Business Process
+                                                    Cloud Services
                                                 </a>
                                                 <a
                                                     href="/cloud/"
                                                     style={{}}
                                                     target="_self"
                                                 >
-                                                    Cloud
+                                                    Network Audit
                                                 </a>
                                             </div>
                                             <div className="col ">
@@ -283,28 +297,28 @@ const Landingpage = () => {
                                                     style={{}}
                                                     target="_self"
                                                 >
-                                                    Consulting
+                                                    Resident Engineer Outsourcing
                                                 </a>
                                                 <a
                                                     href="/cybersecurity/"
                                                     style={{}}
                                                     target="_self"
                                                 >
-                                                    Cybersecurity
+                                                    Network Consultation
                                                 </a>
                                                 <a
                                                     href="/analytics/"
                                                     style={{}}
                                                     target="_self"
                                                 >
-                                                    Data & Analytics
+                                                    Network Design & Implementation
                                                 </a>
                                                 <a
                                                     href="/digital/"
                                                     style={{}}
                                                     target="_self"
                                                 >
-                                                    Digital Experiences
+                                                    Infrastructure Deployment Services
                                                 </a>
                                             </div>
                                             <div className="col ">
@@ -313,15 +327,9 @@ const Landingpage = () => {
                                                     style={{}}
                                                     target="_self"
                                                 >
-                                                    Engineering
+                                                    IT Staff Augmentation
                                                 </a>
-                                                <a
-                                                    href="/sustainability/"
-                                                    style={{}}
-                                                    target="_self"
-                                                >
-                                                    Sustainability
-                                                </a>
+
                                             </div>
                                         </div>
                                     </li>
@@ -344,50 +352,30 @@ const Landingpage = () => {
                                                     style={{}}
                                                     target="_self"
                                                 >
-                                                    Aerospace & Defense
+                                                    Media Industry
                                                 </a>
                                                 <a
                                                     href="/automotive/"
                                                     style={{}}
                                                     target="_self"
                                                 >
-                                                    Automotive
+                                                    Pharmaceutical Industry
                                                 </a>
                                                 <a
                                                     href="/banking/"
                                                     style={{}}
                                                     target="_self"
                                                 >
-                                                    Banking
+                                                    Events Industry
                                                 </a>
                                                 <a
                                                     href="/capital-markets/"
                                                     style={{}}
                                                     target="_self"
                                                 >
-                                                    Capital Markets
+                                                    E-Sports Industry
                                                 </a>
-                                                <a
-                                                    href="/communications/"
-                                                    style={{}}
-                                                    target="_self"
-                                                >
-                                                    Communications
-                                                </a>
-                                                <a
-                                                    href="/consumer-electronics/"
-                                                    style={{}}
-                                                    target="_self"
-                                                >
-                                                    Consumer Electronics
-                                                </a>
-                                                <a
-                                                    href="/consumer-packaged-goods/"
-                                                    style={{}}
-                                                    target="_self"
-                                                >
-                                                    Consumer Packaged Goods
-                                                </a>
+
                                             </div>
                                             <div className="col ">
                                                 <a
@@ -395,130 +383,39 @@ const Landingpage = () => {
                                                     style={{}}
                                                     target="_self"
                                                 >
-                                                    Education
+                                                    Software House
                                                 </a>
                                                 <a
                                                     href="/engineering-construction-operations/"
                                                     style={{}}
                                                     target="_self"
                                                 >
-                                                    Engineering Construction & Operations
+                                                    Marketing Agencies
                                                 </a>
                                                 <a
                                                     href="/healthcare/"
                                                     style={{}}
                                                     target="_self"
                                                 >
-                                                    Healthcare
+                                                    Food & Beverages Industry
                                                 </a>
                                                 <a
                                                     href="/process-and-industrial-manufacturing/"
                                                     style={{}}
                                                     target="_self"
                                                 >
-                                                    Industrial & Process Manufacturing
+                                                    Factories & Industrial Zones
                                                 </a>
-                                                <a
-                                                    href="/insurance/"
-                                                    style={{}}
-                                                    target="_self"
-                                                >
-                                                    Insurance
-                                                </a>
-                                                <a
-                                                    href="/pharmaceutical-and-life-sciences/"
-                                                    style={{}}
-                                                    target="_self"
-                                                >
-                                                    Life Sciences & Pharma
-                                                </a>
+
                                             </div>
                                             <div className="col ">
-                                                <a
-                                                    href="/new-age-media/"
-                                                    style={{}}
-                                                    target="_self"
-                                                >
-                                                    Media & Info Services
-                                                </a>
-                                                <a
-                                                    href="/medical-devices/"
-                                                    style={{}}
-                                                    target="_self"
-                                                >
-                                                    Medical Devices
-                                                </a>
-                                                <a
-                                                    href="/natural-resources/"
-                                                    style={{}}
-                                                    target="_self"
-                                                >
-                                                    Natural Resources
-                                                </a>
-                                                <a
-                                                    href="/network-edge-providers/"
-                                                    style={{}}
-                                                    target="_self"
-                                                >
-                                                    Network & Edge Providers
-                                                </a>
-                                                <a
-                                                    href="/oil-and-gas/"
-                                                    style={{}}
-                                                    target="_self"
-                                                >
-                                                    Oil & Gas
-                                                </a>
-                                                <a
-                                                    href="/platforms-and-software-products/"
-                                                    style={{}}
-                                                    target="_self"
-                                                >
-                                                    Platforms & Software Products
-                                                </a>
-                                                <a
-                                                    href="/professional-services/"
-                                                    style={{}}
-                                                    target="_self"
-                                                >
-                                                    Professional Services
-                                                </a>
-                                            </div>
-                                            <div className="col ">
-                                                <a
-                                                    href="/public-sector/"
-                                                    style={{}}
-                                                    target="_self"
-                                                >
-                                                    Public Sector
-                                                </a>
-                                                <a
-                                                    href="/retail/"
-                                                    style={{}}
-                                                    target="_self"
-                                                >
-                                                    Retail
-                                                </a>
-                                                <a
-                                                    href="/semiconductors/"
-                                                    style={{}}
-                                                    target="_self"
-                                                >
-                                                    Semiconductors
-                                                </a>
-                                                <a
-                                                    href="/travel-and-transportation/"
-                                                    style={{}}
-                                                    target="_self"
-                                                >
-                                                    Transportation & Services
-                                                </a>
+
                                                 <a
                                                     href="/utilities/"
                                                     style={{}}
                                                     target="_self"
                                                 >
-                                                    Utilities
+                                                    Hotels & Resorts
                                                 </a>
                                             </div>
                                         </div>
@@ -537,7 +434,7 @@ const Landingpage = () => {
                                             style={{}}
                                             target="_self"
                                         >
-                                            About Wipro
+                                            About Spotcomm
                                         </a>
                                         <div
                                             className="dropdown-subnav"
@@ -688,7 +585,7 @@ const Landingpage = () => {
                                     </li>
                                     <li className="column-0">
                                         <a
-                                            href="https://careers.wipro.com/careers-home/"
+                                            href=""
                                             style={{}}
                                             target="_blank"
                                         >
@@ -706,364 +603,29 @@ const Landingpage = () => {
                                     </li>
                                 </ul>
                             </nav>
-                            {/* <div className="extraHeaderOptions">
-                                <div className="geographies">
-                                    <a className="geo">
-                                        <img
-                                            alt=""
-                                            src="/flag_none.svg"
-                                        />
-                                    </a>
-                                    <a className="mobileGeo">
-                                        <img
-                                            alt=""
-                                            src="/flag_none.png"
-                                        />
-                                        Locations
-                                    </a>
-                                    <div className="dropdown-subnav">
-                                        <div className="col hasCategory">
-                                            <div className="countryContainer">
-                                                <a className="catTitle">
-                                                    America
-                                                </a>
-                                            </div>
-                                            <div className="accordian">
-                                                <div className="countryContainer">
-                                                    <a
-                                                        href="/en-BR/"
-                                                        rel="noopener noreferrer"
-                                                        target="_blank"
-                                                    >
-                                                        Brazil
-                                                    </a>
-                                                    <div className="geoLinkContainer">
-                                                        <a
-                                                            className="geoLinks"
-                                                            href="/en-BR/"
-                                                            rel="noopener noreferrer"
-                                                            target="_blank"
-                                                        >
-                                                            En
-                                                        </a>
-                                                        <a
-                                                            className="geoLinks"
-                                                            href="/pt-BR/"
-                                                            rel="noopener noreferrer"
-                                                            target="_blank"
-                                                        >
-                                                            Po
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div className="countryContainer">
-                                                    <a
-                                                        href="/en-CA/"
-                                                        rel="noopener noreferrer"
-                                                        target="_blank"
-                                                    >
-                                                        Canada
-                                                    </a>
-                                                </div>
-                                                <div className="countryContainer">
-                                                    <a
-                                                        href="/en-latam/"
-                                                        rel="noopener noreferrer"
-                                                        target="_blank"
-                                                    >
-                                                        Latam
-                                                    </a>
-                                                </div>
-                                                <div className="countryContainer">
-                                                    <a
-                                                        href="/en-MX/"
-                                                        rel="noopener noreferrer"
-                                                        target="_blank"
-                                                    >
-                                                        Mexico
-                                                    </a>
-                                                    <div className="geoLinkContainer">
-                                                        <a
-                                                            className="geoLinks"
-                                                            href="/en-MX/"
-                                                            rel="noopener noreferrer"
-                                                            target="_blank"
-                                                        >
-                                                            En
-                                                        </a>
-                                                        <a
-                                                            className="geoLinks"
-                                                            href="/es-MX/"
-                                                            rel="noopener noreferrer"
-                                                            target="_blank"
-                                                        >
-                                                            Sp
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div className="countryContainer">
-                                                    <a
-                                                        href="/en-US/"
-                                                        rel="noopener noreferrer"
-                                                        target="_blank"
-                                                    >
-                                                        United States
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col hasCategory">
-                                            <div className="countryContainer">
-                                                <a
-                                                    className="catTitle"
-                                                    href="/en-EU/"
-                                                    rel="noopener noreferrer"
-                                                    target="_blank"
-                                                >
-                                                    Europe
-                                                </a>
-                                                <div className="geoLinkContainer">
-                                                    <a
-                                                        className="geoLinks"
-                                                        href="/en-EU/"
-                                                        rel="noopener noreferrer"
-                                                        target="_blank"
-                                                    >
-                                                        En
-                                                    </a>
-                                                    <a
-                                                        className="geoLinks"
-                                                        href="/de-EU/"
-                                                        rel="noopener noreferrer"
-                                                        target="_blank"
-                                                    >
-                                                        De
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div className="accordian">
-                                                <div className="countryContainer">
-                                                    <a
-                                                        href="/en-benelux/"
-                                                        rel="noopener noreferrer"
-                                                        target="_blank"
-                                                    >
-                                                        Benelux
-                                                    </a>
-                                                </div>
-                                                <div className="countryContainer">
-                                                    <a
-                                                        href="/en-DE/"
-                                                        rel="noopener noreferrer"
-                                                        target="_blank"
-                                                    >
-                                                        Germany & Austria
-                                                    </a>
-                                                    <div className="geoLinkContainer">
-                                                        <a
-                                                            className="geoLinks"
-                                                            href="/en-DE/"
-                                                            rel="noopener noreferrer"
-                                                            target="_blank"
-                                                        >
-                                                            En
-                                                        </a>
-                                                        <a
-                                                            className="geoLinks"
-                                                            href="/de-DE/"
-                                                            rel="noopener noreferrer"
-                                                            target="_blank"
-                                                        >
-                                                            De
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div className="countryContainer">
-                                                    <a
-                                                        href="/en-nordic/"
-                                                        rel="noopener noreferrer"
-                                                        target="_blank"
-                                                    >
-                                                        Nordic
-                                                    </a>
-                                                </div>
-                                                <div className="countryContainer">
-                                                    <a
-                                                        href="/en-Southern-EU/"
-                                                        rel="noopener noreferrer"
-                                                        target="_blank"
-                                                    >
-                                                        Southern Europe
-                                                    </a>
-                                                    <div className="geoLinkContainer">
-                                                        <a
-                                                            className="geoLinks"
-                                                            href="/en-Southern-EU/"
-                                                            rel="noopener noreferrer"
-                                                            target="_blank"
-                                                        >
-                                                            En
-                                                        </a>
-                                                        <a
-                                                            className="geoLinks"
-                                                            href="/fr-Southern-EU/"
-                                                            rel="noopener noreferrer"
-                                                            target="_blank"
-                                                        >
-                                                            Fr
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div className="countryContainer">
-                                                    <a
-                                                        href="/en-UKI/"
-                                                        rel="noopener noreferrer"
-                                                        target="_blank"
-                                                    >
-                                                        United Kingdom & Ireland
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col hasCategory">
-                                            <div className="countryContainer">
-                                                <a className="catTitle">
-                                                    Asia Pacific
-                                                </a>
-                                            </div>
-                                            <div className="accordian">
-                                                <div className="countryContainer">
-                                                    <a
-                                                        href="/en-asean/"
-                                                        rel="noopener noreferrer"
-                                                        target="_blank"
-                                                    >
-                                                        Asean
-                                                    </a>
-                                                </div>
-                                                <div className="countryContainer">
-                                                    <a
-                                                        href="/en-ANZ/"
-                                                        rel="noopener noreferrer"
-                                                        target="_blank"
-                                                    >
-                                                        Australia & New Zealand
-                                                    </a>
-                                                </div>
-                                                <div className="countryContainer">
-                                                    <a
-                                                        href="/en-CN/"
-                                                        rel="noopener noreferrer"
-                                                        target="_blank"
-                                                    >
-                                                        China
-                                                    </a>
-                                                </div>
-                                                <div className="countryContainer">
-                                                    <a
-                                                        href="/en-JP/"
-                                                        rel="noopener noreferrer"
-                                                        target="_blank"
-                                                    >
-                                                        Japan
-                                                    </a>
-                                                    <div className="geoLinkContainer">
-                                                        <a
-                                                            className="geoLinks"
-                                                            href="/en-JP/"
-                                                            rel="noopener noreferrer"
-                                                            target="_blank"
-                                                        >
-                                                            En
-                                                        </a>
-                                                        <a
-                                                            className="geoLinks"
-                                                            href="/ja-JP/"
-                                                            rel="noopener noreferrer"
-                                                            target="_blank"
-                                                        >
-                                                            Jp
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div className="countryContainer">
-                                                    <a
-                                                        href="/en-KR/"
-                                                        rel="noopener noreferrer"
-                                                        target="_blank"
-                                                    >
-                                                        Korea
-                                                    </a>
-                                                </div>
-                                                <div className="countryContainer">
-                                                    <a
-                                                        href="/en-TW/"
-                                                        rel="noopener noreferrer"
-                                                        target="_blank"
-                                                    >
-                                                        Taiwan
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col hasCategory">
-                                            <div className="countryContainer">
-                                                <a className="catTitle">
-                                                    India & Middle East
-                                                </a>
-                                            </div>
-                                            <div className="accordian">
-                                                <div className="countryContainer">
-                                                    <a
-                                                        href="/en-IN/"
-                                                        rel="noopener noreferrer"
-                                                        target="_blank"
-                                                    >
-                                                        India
-                                                    </a>
-                                                </div>
-                                                <div className="countryContainer">
-                                                    <a
-                                                        href="/en-ME/"
-                                                        rel="noopener noreferrer"
-                                                        target="_blank"
-                                                    >
-                                                        Middle East
-                                                    </a>
-                                                </div>
-                                                <div className="col hasCategory">
-                                                    <div className="countryContainer">
-                                                        <a
-                                                            className="catTitle"
-                                                            href="/en-africa/"
-                                                            rel="noopener noreferrer"
-                                                            target="_blank"
-                                                        >
-                                                            Africa
-                                                        </a>
-                                                    </div>
-                                                    <div className="countryContainer">
-                                                        <a
-                                                            className="global-site catTitle"
-                                                            href="/en/"
-                                                            rel="noopener noreferrer"
-                                                            target="_blank"
-                                                        >
-                                                            Global Site
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="hamburger">
-                                    <span />
-                                </div>
-                            </div> */}
+
                         </div>
                     </header>
-                    <div className='banner'>
+
+                    <div className='banner' style={{ position: 'relative', height: '100vh', overflow: 'hidden' }}>
+                        <div className='container' style={{ position: 'relative', zIndex: 2 }}>
+                            <div className='row'>
+                                <div className='col-lg-7 bannerh2 mx-auto'>
+                                    <h2 className='d-flex justify-content-center align-items-center mx-auto '>Unleash seamless <br /> connectivity with Managed  Services that empower your <br /> businesses</h2>
+                                    <p className=''>An insight report by Spotcomm FullStride Cloud & Forbes.</p>
+                                    <button type="button" className="btns">Learn More</button>
+                                </div>
+                                <div className='col-lg-5 float-sm-start'>
+                                    <img src='/banner.png' className='w-100' />
+                                </div>
+                            </div>
+                        </div>
+
+                        <section id="section05" className="demo">
+                            <a href="#section06" className='text-dark'>Scroll<span></span></a>
+                        </section>
+                    </div>
+                    {/* <div className='banner'>
                         <div className='container  '>
                             <div className='row '> <br />
                                 <div className='col-lg-6  bannerh2  mx-auto'> <br /><br /><br /><br />
@@ -1073,7 +635,7 @@ const Landingpage = () => {
                                 </div>
                                 <div className='col-lg-6   float-sm-start '>
                                     <img src='/banner.png' className='w-100 ' />
-                                    {/* <video src='/video.mp4' className='w-100 ' autoPlay controls></video> */}
+                                  
                                 </div>
 
                             </div>
@@ -1082,33 +644,29 @@ const Landingpage = () => {
                                 <a href="#section06" className='text-dark'>Scroll<span></span></a>
                             </section>
                         </div>
-                    </div>
-                    <section id="section06">
-                        <div className=' d-flex ' >
-
-                            <img className='w-50' src='/4.png' />
-
-                            <img className='w-50' src='/2.png' />
-
-                        </div>
-                        <div className=' d-flex '>
-
-                            <img className='w-50' src='/3.png' />
-
-                            <img className='w-50' src='/1.png' />
+                   
+                    </div> */}
+                    {/* <section id="section06" > */}
+                    <div className=' d-flex ' id="section06" >
+                        <div className='col-lg-6 ' >
+                            <img className='' style={{ width: "-webkit-fill-available" }} src='/4.png' />
 
                         </div>
-                        {/* <div className=' d-flex '>
-                    <div className='w-50  '>
-                        <img className='' src='/3.png' />
+                        <div className='col-lg-6 ' >
+                            <img className='' style={{ width: "-webkit-fill-available" }} src='/2.png' />
+                        </div>
                     </div>
-                    <div className='w-50   '>
-                        <img className='' src='/1.png' />
+                    <div className=' d-flex ' id="section06" >
+                        <div className='col-lg-6 ' >
+                            <img className='' style={{ width: "-webkit-fill-available" }} src='/3.png' />
+                        </div>
+                        <div className='col-lg-6 ' >
+                            <img className='' style={{ width: "-webkit-fill-available" }} src='/1.png' />
+                        </div>
                     </div>
 
-                </div> */}
 
-                    </section>
+                    {/* </section> */}
 
                     <div className=' row banner3 ' id='section07'>
                         <div className='col-lg-6 heading'>
@@ -1122,7 +680,7 @@ const Landingpage = () => {
                             <img src='/video.png' />
                         </div>
                     </div>
-                    <div className=' d-flex '> <br />
+                    {/* <div className=' d-flex '> <br />
                         <div className='col-lg-4   '>
                             <img src='/sec1.png' style={{ height: "-webkit-fill-available" }} className='w-100 ' />
                         </div>
@@ -1143,8 +701,56 @@ const Landingpage = () => {
                         <div className='col-lg-4   '>
                             <img src='/sec6.png' style={{ height: "-webkit-fill-available" }} className='w-100 ' />
                         </div>
+                    </div> */}
+                    <div className='d-flex'>
+                        <div className='col-lg-4 position-relative'>
+                            <img src='/sec1.png' style={{ height: "100%" }} className='w-100' />
+                            <div className="text-overlay">
+                                <h2>Lorem Ipsum</h2>
+                                <p>Dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </div>
+                        <div className='col-lg-4 position-relative'>
+                            <img src='/sec2.png' style={{ height: "100%" }} className='w-100' />
+                            <div className="text-overlay">
+                                <h2>Lorem Ipsum</h2>
+                                <p>Dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </div>
+                        <div className='col-lg-4 position-relative'>
+                            <img src='/sec3.png' style={{ height: "100%" }} className='w-100' />
+                            <div className="text-overlay">
+                                <h2>Lorem Ipsum</h2>
+                                <p>Dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </div>
                     </div>
-                    <br />     <br /> 
+
+                    <div className='d-flex'>
+                        <div className='col-lg-4 position-relative'>
+                            <img src='/sec4.png' style={{ height: "100%" }} className='w-100' />
+                            <div className="text-overlay">
+                                <h2>Lorem Ipsum</h2>
+                                <p>Dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </div>
+                        <div className='col-lg-4 position-relative'>
+                            <img src='/sec5.png' style={{ height: "100%" }} className='w-100' />
+                            <div className="text-overlay">
+                                <h2>Lorem Ipsum</h2>
+                                <p>Dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </div>
+                        <div className='col-lg-4 position-relative'>
+                            <img src='/sec6.png' style={{ height: "100%" }} className='w-100' />
+                            <div className="text-overlay">
+                                <h2>Lorem Ipsum</h2>
+                                <p>Dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br />     <br />
                     <div className='banner4'>
                         <h3 className='text-center'>
                             Each day, Spotcomm utilizes advanced AI technologies to help <br /> clients worldwide create a more resilient, secure, and sustainable <br /> future.
@@ -1155,44 +761,44 @@ const Landingpage = () => {
                         </h2>
                         <div class=" row">
                             <div class=""><br />
-                                <input type="text" class="form-control input" placeholder="First name" aria-label="First name" />
+                                <input type="text" class="form-control input" placeholder="First Name" aria-label="First name" />
                             </div><br />
                             <div class=""><br />
-                                <input type="text" class="form-control input" placeholder="Last name" aria-label="Last name" />
+                                <input type="text" class="form-control input" placeholder="Last Name" aria-label="Last name" />
                             </div>
                             <div class=""><br />
-                                <input type="text" class="form-control input" placeholder="First name" aria-label="First name" />
+                                <input type="text" class="form-control input" placeholder="Work Email" aria-label="First name" />
                             </div><br />
                             <div class=""><br />
-                                <input type="text" class="form-control input" placeholder="Last name" aria-label="Last name" />
+                                <input type="text" class="form-control input" placeholder="Job Title" aria-label="Last name" />
                             </div>
                             <div class=""><br />
-                                <input type="text" class="form-control input" placeholder="First name" aria-label="First name" />
+                                <input type="text" class="form-control input" placeholder="Company" aria-label="First name" />
                             </div><br />
                             <div class=""><br />
-                                <input type="text" class="form-control input" placeholder="Last name" aria-label="Last name" /> <br />
+                                <input type="text" class="form-control input" placeholder="Country" aria-label="Last name" /> <br />
                             </div>
-                            <textarea class="form-control input" id="exampleFormControlTextarea1" placeholder="Message" rows="3"></textarea>
+                            <textarea class="form-control inputs" id="exampleFormControlTextarea1" placeholder="Message" rows="3"></textarea>
                             <br /> <div class=""><br />
                                 <div class="form-check  checkbox ">
                                     <input class="form-check-input mt-2" type="checkbox" id="gridCheck" />
-                                    <label class="form-check-label" for="gridCheck">
+                                    <label class="form-check-label mx-3" for="gridCheck">
                                         Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                                     </label>
                                 </div>
 
-                            </div><br />
-                            <div class="">
+                            </div>
+                            <div class=""><br />
                                 <div class="form-check  checkbox">
                                     <input class="form-check-input " type="checkbox" id="gridCheck" />
-                                    <label class="form-check-label" for="gridCheck">
+                                    <label class="form-check-label mx-3" for="gridCheck">
                                         Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                                     </label>
                                 </div>
 
                             </div>
 
-                            <br />  <button type="button" class="btn btn-dark btns2 mt-3">Submit</button>  <br />
+                            <br />  <button type="button" class="btn  btns2 mt-3">Submit</button>  <br />
                             <br />   <p className='text-center text-secondary'> <br />Click here to opt out of Spotcomm’s mailing lists</p>
                             <br />
                         </div>
@@ -2083,7 +1689,6 @@ const Landingpage = () => {
                     </div>
                     <section>
                         <div className=' row ' id='section05'>
-
                             <div className='col-lg-4   '>
                                 <img src='/sec1.png' className='w-100 ' />
                             </div>
@@ -2093,7 +1698,6 @@ const Landingpage = () => {
                             <div className='col-lg-4   '>
                                 <img src='/sec3.png' className='w-100 ' />
                             </div>
-
                         </div>
 
 
@@ -2163,7 +1767,9 @@ const Landingpage = () => {
                             <div class=" col-lg-12"><br />
                                 <input type="text" class="form-control input" placeholder="Last name" aria-label="Last name" /> <br />
                             </div>
-                            <textarea class="form-check input col-lg-12" id="exampleFormControlTextarea1" placeholder="Message" rows="3"></textarea>
+                            <div class=" col-lg-12">
+                                <textarea class="form-check input col-lg-12" id="exampleFormControlTextarea1" placeholder="Message" rows="3"></textarea>
+                            </div>
                             <div class=""> <br />
                                 <div class="form-check checkbox" style={{ display: "inline-flex" }}>
                                     <input class="form-check-input mt-4" type="checkbox" id="gridCheck" />

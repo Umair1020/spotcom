@@ -1,6 +1,184 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import $ from 'jquery'
+window.jquery = window.$ = $
 
 const Header = () => {
+    useEffect(() => {
+        const handleDocumentReady = () => {
+            const b = (a, c) => {
+                if (a === "open") {
+                    $("header").addClass("dropdown-open active");
+                    $("header .geographies .dropdown-subnav").fadeOut();
+                    $("header .geographies > a").removeClass("active");
+                    c.find(".dropdown-subnav").fadeIn(300).css({ display: "flex" });
+                } else if (a === "close") {
+                    $("header").removeClass("dropdown-open active");
+                    c.find(".dropdown-subnav").hide();
+                }
+            };
+
+            $(".header").each(function () {
+                this.style.setProperty("--initHeaderHeight", $(this).outerHeight() + "px");
+            });
+
+            $("[data-hash]").on("click", function (e) {
+                if ($(window).width() <= 1024) {
+                    $("header .hamburger").click();
+                }
+
+                const hash = $(this).attr("data-hash");
+                if (typeof hash === "string" && hash.length > 0 && document.getElementById(hash.substring(1))) {
+                    e.preventDefault();
+                    const offset = $(hash).offset().top;
+                    if ($("header").hasClass("navOpen")) {
+                        $("header").removeClass("navOpen");
+                    }
+                    setTimeout(() => {
+                        $("html, body").css({ overflow: "unset" }).animate({ scrollTop: offset }, 1000);
+                    }, 500);
+                }
+            });
+
+            if ($(window).width() <= 1024) {
+                $(".navigation").slideUp();
+            }
+
+            $("header .hamburger").on("click", () => {
+                if ($("body").hasClass("navOpen")) {
+                    $("html, body").removeClass("hideOverflow");
+                    $("body").removeClass("navOpen");
+                    $("header .navigation").slideUp();
+                    $("header .dropdown-subnav").hide().slideUp();
+                    $(".navigation > ul > li").removeClass("active");
+                } else {
+                    $("html, body").addClass("hideOverflow");
+                    $("body").addClass("navOpen");
+                    $("header .navigation").slideDown();
+                    if ($("body").hasClass("searchOpen")) {
+                        $("body").removeClass("searchOpen").find("header");
+                        $("header .searchPopup").css({ top: $("header").outerHeight(true) }).fadeOut();
+                    }
+                    const height = $(window).outerHeight() - ($("header").outerHeight() + $(".header .container .extraHeaderOptions > div.geographies").outerHeight(true));
+                    $("header .navigation").css({ top: $("header").outerHeight() });
+                    setTimeout(() => {
+                        $("header .navigation, .header .container .geographies .dropdown-subnav").css({ height });
+                        $("header .container .geographies .dropdown-subnav").css({
+                            bottom: $(".header .container .extraHeaderOptions > div.geographies").outerHeight(true) + 2 + "px"
+                        });
+                    }, 500);
+                }
+            });
+
+            $("header .navigation > ul > li > a").on("click", function () {
+                if ($(window).width() <= 1024) {
+                    const dropdown = $(this).siblings(".dropdown-subnav");
+                    if (dropdown.length) {
+                        $(this).parents("li").toggleClass("active");
+                        dropdown.slideToggle();
+                        $(".navigation > ul > li .dropdown-subnav").not(dropdown).slideUp();
+                    }
+                }
+            });
+
+            $("header .navigation > ul > li").hover(function () {
+                if ($(window).width() > 1024) {
+                    b("open", $(this));
+                }
+            }, function () {
+                if ($(window).width() > 1024) {
+                    b("close", $(this));
+                }
+            });
+
+            $("header .geographies > a").on("click", function () {
+                const subnav = $(this).siblings(".dropdown-subnav");
+                if (subnav.is(":not(:hidden)")) {
+                    $(this).removeClass("active").parents("header").removeClass("dropdown-open");
+                    if ($(window).width() > 1024) {
+                        subnav.fadeOut();
+                    } else {
+                        subnav.slideUp();
+                        $("header .navigation").fadeIn();
+                    }
+                } else {
+                    $(this).addClass("active").parents("header").addClass("dropdown-open");
+                    if ($(window).width() > 1024) {
+                        subnav.fadeIn(300).css({ display: "flex" });
+                    } else {
+                        subnav.slideDown();
+                        $("header .navigation").fadeOut();
+                    }
+                }
+                if ($("body").hasClass("searchOpen") && $(window).width() > 1024) {
+                    $("html, body").removeClass("hideOverflow");
+                    $("body").removeClass("searchOpen");
+                    $("header .searchPopup").css({ top: $("header").outerHeight(true) }).fadeOut();
+                }
+            });
+
+            $("header .search").on("click", function () {
+                const searchPopup = $("header .searchPopup");
+                searchPopup.css({ height: $(window).outerHeight(true) - $("header").outerHeight(true) });
+                if ($("body").hasClass("searchOpen")) {
+                    $("html, body").removeClass("hideOverflow");
+                    $("body").removeClass("searchOpen");
+                    $("header").removeClass("dropdown-open");
+                    searchPopup.css({ top: $("header").outerHeight(true) }).fadeOut();
+                } else {
+                    $("html, body").addClass("hideOverflow");
+                    $("body").addClass("searchOpen");
+                    $("header").addClass("dropdown-open");
+                    searchPopup.css({ top: $("header").outerHeight(true) }).fadeIn();
+                    if ($(window).width() <= 1024) {
+                        $("body").removeClass("navOpen");
+                        $("header .navigation").slideUp();
+                        $("header .dropdown-subnav").hide().slideUp();
+                    }
+                }
+            });
+
+            let lastScrollTop = 0;
+            $(window).on("scroll", function () {
+                const scrollTop = $(this).scrollTop();
+                if (!$("body").hasClass("navOpen") && $("header").attr("data-homepage") === "true") {
+                    if (scrollTop < lastScrollTop || scrollTop <= 0) {
+                        $("header").css({ top: 0 });
+                    } else {
+                        $("header").css({ top: -$("header").outerHeight(true) });
+                    }
+                }
+                lastScrollTop = scrollTop;
+                $("header").toggleClass("scrolling", scrollTop > 0);
+            });
+
+            $(document).on("click", function (e) {
+                if (!e.target.classList.contains("geo") && $(window).width() > 1024) {
+                    $(".dropdown-subnav").slideUp();
+                    $(".geo").removeClass("active");
+                    $('header[role="header"]').removeClass("dropdown-open");
+                }
+            });
+
+            const debounce = (func, wait, immediate) => {
+                let timeout;
+                return function () {
+                    const context = this;
+                    const args = arguments;
+                    if (immediate && !timeout) func.apply(context, args);
+                    clearTimeout(timeout);
+                    timeout = setTimeout(() => {
+                        timeout = null;
+                        if (!immediate) func.apply(context, args);
+                    }, wait);
+                };
+            };
+        };
+
+        $(document).ready(handleDocumentReady);
+        return () => {
+            $(document).off("ready", handleDocumentReady);
+        };
+    }, []);
     return (
         <div className='mx-auto d-flex'>
             <header
@@ -52,28 +230,28 @@ const Header = () => {
                                             style={{}}
                                             target="_self"
                                         >
-                                            Applications
+                                            Business Solution
                                         </a>
                                         <a
                                             href="/ai/"
                                             style={{}}
                                             target="_self"
                                         >
-                                            Artificial Intelligence
+                                         Cyber Security
                                         </a>
                                         <a
                                             href="/business-process/"
                                             style={{}}
                                             target="_self"
                                         >
-                                            Business Process
+                                        Cloud Services
                                         </a>
                                         <a
                                             href="/cloud/"
                                             style={{}}
                                             target="_self"
                                         >
-                                            Cloud
+                                          Network Audit
                                         </a>
                                     </div>
                                     <div className="col ">
@@ -82,28 +260,28 @@ const Header = () => {
                                             style={{}}
                                             target="_self"
                                         >
-                                            Consulting
+                                        Resident Engineer Outsourcing
                                         </a>
                                         <a
                                             href="/cybersecurity/"
                                             style={{}}
                                             target="_self"
                                         >
-                                            Cybersecurity
+                                            Network Consultation
                                         </a>
                                         <a
                                             href="/analytics/"
                                             style={{}}
                                             target="_self"
                                         >
-                                            Data & Analytics
+                                         Network Design & Implementation
                                         </a>
                                         <a
                                             href="/digital/"
                                             style={{}}
                                             target="_self"
                                         >
-                                            Digital Experiences
+                                            Infrastructure Deployment Services
                                         </a>
                                     </div>
                                     <div className="col ">
@@ -112,15 +290,9 @@ const Header = () => {
                                             style={{}}
                                             target="_self"
                                         >
-                                            Engineering
+                                            IT Staff Augmentation  
                                         </a>
-                                        <a
-                                            href="/sustainability/"
-                                            style={{}}
-                                            target="_self"
-                                        >
-                                            Sustainability
-                                        </a>
+                                       
                                     </div>
                                 </div>
                             </li>
