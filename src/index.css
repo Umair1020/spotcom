@@ -10,10 +10,22 @@
   color: white; /* You can adjust the color to match your design */
   text-align: center;
 }
+.text-overlay2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white; /* You can adjust the color to match your design */
+  text-align: center;
+}
 
 .text-overlay h2 {
   margin: 0;
-  font-size:40px; /* Adjust the font size as needed */
+  font-size:35px; /* Adjust the font size as needed */
+}
+.text-overlay2 h2 {
+  margin: 0;
+  font-size:50px; /* Adjust the font size as needed */
 }
 
 .text-overlay p {

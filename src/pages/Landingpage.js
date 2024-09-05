@@ -552,13 +552,7 @@ const Landingpage = () => {
                                                 >
                                                     Partner Ecosystem
                                                 </a>
-                                                <a
-                                                    href="/about-us/privacy-at-wipro/"
-                                                    style={{}}
-                                                    target="_self"
-                                                >
-                                                    Privacy at Wipro
-                                                </a>
+
                                                 <a
                                                     href="/about-us/supplier-diversity/"
                                                     style={{}}
@@ -567,18 +561,18 @@ const Landingpage = () => {
                                                     Supplier Diversity
                                                 </a>
                                                 <a
-                                                    href="/about-us/the-story-of-wipro/"
+                                                    href="/about-us"
                                                     style={{}}
                                                     target="_self"
                                                 >
-                                                    The Story of Wipro
+                                                    The Story of Spotcomm
                                                 </a>
                                                 <a
                                                     href="/ventures/"
                                                     style={{}}
                                                     target="_self"
                                                 >
-                                                    Wipro Ventures
+                                                    Spotcomm Ventures
                                                 </a>
                                             </div>
                                         </div>
@@ -648,20 +642,35 @@ const Landingpage = () => {
                     </div> */}
                     {/* <section id="section06" > */}
                     <div className=' d-flex ' id="section06" >
-                        <div className='col-lg-6 ' >
-                            <img className='' style={{ width: "-webkit-fill-available" }} src='/4.png' />
-
+                        <div className='col-lg-6 position-relative'>
+                            <img src='/1.png' style={{ height: "100%" }} className='w-100' />
+                            <div className="text-overlay2">
+                                <h2> CLOUD</h2>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            </div>
                         </div>
-                        <div className='col-lg-6 ' >
-                            <img className='' style={{ width: "-webkit-fill-available" }} src='/2.png' />
+                        <div className='col-lg-6 position-relative'>
+                            <img src='/2.png' style={{ height: "100%" }} className='w-100' />
+                            <div className="text-overlay2">
+                                <h2>INFRASTRUCTURE</h2>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry..</p>
+                            </div>
                         </div>
                     </div>
                     <div className=' d-flex ' id="section06" >
-                        <div className='col-lg-6 ' >
-                            <img className='' style={{ width: "-webkit-fill-available" }} src='/3.png' />
+                        <div className='col-lg-6 position-relative'>
+                            <img src='/3.png' style={{ height: "100%" }} className='w-100' />
+                            <div className="text-overlay2">
+                                <h2>DATA CENTER</h2>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            </div>
                         </div>
-                        <div className='col-lg-6 ' >
-                            <img className='' style={{ width: "-webkit-fill-available" }} src='/1.png' />
+                        <div className='col-lg-6 position-relative'>
+                            <img src='/4.png' style={{ height: "100%" }} className='w-100' />
+                            <div className="text-overlay2">
+                                <h2>CYBER SECURITY</h2>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            </div>
                         </div>
                     </div>
 
@@ -782,7 +791,7 @@ const Landingpage = () => {
                             <br /> <div class=""><br />
                                 <div class="form-check  checkbox ">
                                     <input class="form-check-input mt-2" type="checkbox" id="gridCheck" />
-                                    <label class="form-check-label mx-3" for="gridCheck">
+                                    <label class="form-check-label mx-1" for="gridCheck">
                                         Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                                     </label>
                                 </div>
@@ -791,7 +800,7 @@ const Landingpage = () => {
                             <div class=""><br />
                                 <div class="form-check  checkbox">
                                     <input class="form-check-input " type="checkbox" id="gridCheck" />
-                                    <label class="form-check-label mx-3" for="gridCheck">
+                                    <label class="form-check-label mx-1" for="gridCheck">
                                         Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                                     </label>
                                 </div>
@@ -1142,7 +1151,7 @@ const Landingpage = () => {
                                             style={{}}
                                             target="_self"
                                         >
-                                            About Wipro
+                                            About Spotcomm
                                         </a>
                                         <div
                                             className="dropdown-subnav"
@@ -1261,11 +1270,11 @@ const Landingpage = () => {
                                                     Partner Ecosystem
                                                 </a>
                                                 <a
-                                                    href="/about-us/privacy-at-wipro/"
+                                                    href="/about-us/privacy-at-Spotcomm/"
                                                     style={{}}
                                                     target="_self"
                                                 >
-                                                    Privacy at Wipro
+                                                    Privacy at Spotcomm
                                                 </a>
                                                 <a
                                                     href="/about-us/supplier-diversity/"
@@ -1275,25 +1284,25 @@ const Landingpage = () => {
                                                     Supplier Diversity
                                                 </a>
                                                 <a
-                                                    href="/about-us/the-story-of-wipro/"
+                                                    href="/about-us/the-story-of-Spotcomm/"
                                                     style={{}}
                                                     target="_self"
                                                 >
-                                                    The Story of Wipro
+                                                    The Story of Spotcomm
                                                 </a>
                                                 <a
                                                     href="/ventures/"
                                                     style={{}}
                                                     target="_self"
                                                 >
-                                                    Wipro Ventures
+                                                    Spotcomm Ventures
                                                 </a>
                                             </div>
                                         </div>
                                     </li>
                                     <li className="column-0">
                                         <a
-                                            href="https://careers.wipro.com/careers-home/"
+                                            href="https://careers.Spotcomm.com/careers-home/"
                                             style={{}}
                                             target="_blank"
                                         >
@@ -1672,7 +1681,7 @@ const Landingpage = () => {
                         <div className='container  '>
                             <div className='row '> <br />
                                 <div className='col-lg-6  bannerh2  mx-auto'> <br /><br /><br /><br />
-                                    <h2 className='d-flex justify-content-center  align-items-end mx-auto'>Excel in cloud <br /> economics and tap into  the power of AI.</h2>
+                                    <h2 className='d-flex justify-content-center align-items-center mx-auto '>Unleash seamless <br /> connectivity with Managed  Services that empower your <br /> businesses</h2>
                                     <p>An insight report by Spotcomm FullStride Cloud & Forbes. </p>
                                     <button type="button" className="btns">Learn More</button>
                                 </div>
@@ -1689,14 +1698,32 @@ const Landingpage = () => {
                     </div>
                     <section>
                         <div className=' row ' id='section05'>
-                            <div className='col-lg-4   '>
-                                <img src='/sec1.png' className='w-100 ' />
+                            <div className='col-lg-4   position-relative'>
+
+                                <img src='/1.png' style={{ height: "100%" }} className='w-100' />
+                                <div className="text-overlay2">
+                                    <h2>Cloud</h2>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry..</p>
+
+                                </div>
                             </div>
-                            <div className='col-lg-4   '>
-                                <img src='/sec2.png' className='w-100 ' />
+                            <div className='col-lg-4   position-relative'>
+
+                                <img src='/4.png' style={{ height: "100%" }} className='w-100' />
+                                <div className="text-overlay2">
+                                    <h2>Cyber Security</h2>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry..</p>
+
+                                </div>
                             </div>
-                            <div className='col-lg-4   '>
-                                <img src='/sec3.png' className='w-100 ' />
+                            <div className='col-lg-4   position-relative'>
+
+                                <img src='/3.png' style={{ height: "100%" }} className='w-100' />
+                                <div className="text-overlay2">
+                                    <h2> Data Center</h2>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry..</p>
+
+                                </div>
                             </div>
                         </div>
 
@@ -1719,71 +1746,81 @@ const Landingpage = () => {
 
 
                     <div className=' row '>
-                        <div className='col-lg-4   '>
-                            <img src='/sec1.png' className='w-100 ' />
+                    <div className='col-lg-4 position-relative'>
+                            <img src='/sec4.png' style={{ height: "100%" }} className='w-100' />
+                            <div className="text-overlay">
+                                <h2>Lorem Ipsum</h2>
+                                <p>Dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
                         </div>
-                        <div className='col-lg-4   '>
-                            <img src='/sec2.png' className='w-100 ' />
+                        <div className='col-lg-4 position-relative'>
+                            <img src='/sec1.png' style={{ height: "100%" }} className='w-100' />
+                            <div className="text-overlay">
+                                <h2>Lorem Ipsum</h2>
+                                <p>Dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
                         </div>
-                        <div className='col-lg-4   '>
-                            <img src='/sec3.png' className='w-100 ' />
+                        <div className='col-lg-4 position-relative'>
+                            <img src='/sec3.png' style={{ height: "100%" }} className='w-100' />
+                            <div className="text-overlay">
+                                <h2>Lorem Ipsum</h2>
+                                <p>Dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
                         </div>
 
 
-                        <div className='col-lg-4   '>
-                            <img src='/sec4.png' className='w-100 ' />
-                        </div>
-                        <div className='col-lg-4   '>
-                            <img src='/sec5.png' className='w-100 ' />
-                        </div>
-                        <div className='col-lg-4   '>
-                            <img src='/sec6.png' className='w-100 ' />
+                    
+                        <div className='col-lg-4 position-relative'>
+                            <img src='/sec6.png' style={{ height: "100%" }} className='w-100' />
+                            <div className="text-overlay">
+                                <h2>Lorem Ipsum</h2>
+                                <p>Dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
                         </div>
                     </div>
                     <div className='banner4'>
                         <h3 className='text-center'>
-                            Each day, Spotcomm utilizes advanced AI technologies to help <br /> clients worldwide create a more resilient, secure, and sustainable <br /> future.
+                            <br />  Each day, Spotcomm utilizes advanced AI technologies to help <br /> clients worldwide create a more resilient, secure, and sustainable <br /> future.
                         </h3>
                         <br />
                         <h2 className='text-center'>
                             How can we help you?
                         </h2>
                         <div class=" row">
-                            <div class=" col-lg-12"><br />
-                                <input type="text" class="form-control input" placeholder="First name" aria-label="First name" />
+                            <div class="col-lg-12"><br />
+                                <input type="text" class="form-control input" placeholder="First Name" aria-label="First name" />
                             </div><br />
-                            <div class=" col-lg-12"><br />
-                                <input type="text" class="form-control input" placeholder="Last name" aria-label="Last name" />
+                            <div class="col-lg-12"><br />
+                                <input type="text" class="form-control input" placeholder="Last Name" aria-label="Last name" />
                             </div>
-                            <div class=" col-lg-12"><br />
-                                <input type="text" class="form-control input" placeholder="First name" aria-label="First name" />
+                            <div class="col-lg-12"><br />
+                                <input type="text" class="form-control input" placeholder="Work Email" aria-label="First name" />
                             </div><br />
-                            <div class=" col-lg-12"><br />
-                                <input type="text" class="form-control input" placeholder="Last name" aria-label="Last name" />
+                            <div class="col-lg-12"><br />
+                                <input type="text" class="form-control input" placeholder="Job Title" aria-label="Last name" />
                             </div>
-                            <div class=" col-lg-12"><br />
-                                <input type="text" class="form-control input" placeholder="First name" aria-label="First name" />
+                            <div class="col-lg-12"><br />
+                                <input type="text" class="form-control input" placeholder="Company" aria-label="First name" />
                             </div><br />
-                            <div class=" col-lg-12"><br />
-                                <input type="text" class="form-control input" placeholder="Last name" aria-label="Last name" /> <br />
+                            <div class="col-lg-12"><br />
+                                <input type="text" class="form-control input" placeholder="Country" aria-label="Last name" /> <br />
                             </div>
-                            <div class=" col-lg-12">
-                                <textarea class="form-check input col-lg-12" id="exampleFormControlTextarea1" placeholder="Message" rows="3"></textarea>
-                            </div>
-                            <div class=""> <br />
-                                <div class="form-check checkbox" style={{ display: "inline-flex" }}>
-                                    <input class="form-check-input mt-4" type="checkbox" id="gridCheck" />
-                                    <label class="form-check-label ml-3" for="gridCheck">
-                                        checkbox
+                            <div class="col-lg-12">
+                                <textarea class="form-control input" id="exampleFormControlTextarea1" placeholder="Message" rows="3"></textarea>
+                            </div> <div class=""><br />
+                                <div class="form-check  checkbox d-flex">
+                                    <input class="form-check-input " type="checkbox" id="gridCheck" />
+                                    <label class="form-check-label mx-3" for="gridCheck">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                                     </label>
                                 </div>
 
                             </div>
-                            <div class="">
-                                <div class="form-check checkbox" style={{ display: "inline-flex" }}>
-                                    <input class="form-check-input mt-4" type="checkbox" id="gridCheck" />
-                                    <label class="form-check-label ml-3" for="gridCheck">
-                                        checkbox
+                            <div class=""><br />
+                                <div class="form-check  checkbox d-flex">
+                                    <input class="form-check-input " type="checkbox" id="gridCheck" />
+                                    <label class="form-check-label mx-3" for="gridCheck">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                                     </label>
                                 </div>
 

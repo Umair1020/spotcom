@@ -806,7 +806,7 @@ header .container .navigation ul li.column-3 {
 .bannerh2 h2 {
   /* font-family: Poppins; */
   font-weight: bold;
-  font-size: 60px;
+  font-size: 40px;
   color: #444F6B;
 }
 
@@ -851,12 +851,7 @@ header .container .navigation ul li.column-3 {
   color: #fff;
 }
 
-.banner {
-  background: url(/public/video.mp4);
-  /* position: absolute !important; */
-  top: 0;
 
-}
 
 @media (max-width:991px) {
   .input {
@@ -1057,7 +1052,7 @@ header .container .navigation ul li.column-3 {
   display: flex;
   justify-content: center;
 
-  height: 50vh;
+  padding: 50px;
   align-items: center;
 }
 
