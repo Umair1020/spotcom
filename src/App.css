@@ -10,11 +10,58 @@
   --headerMobileArrowColor: rgba(43, 0, 96, 1);
   --headerDropdownLayerBgColor: rgba(255, 255, 255, 0.1)
 }
+:root {
+  --white-color:                  #ffffff;
+  --primary-color:                #7F3E98;
+  --secondary-color:              #ffffff;
+  --section-bg-color:             #f0f8ff;
+  --custom-btn-bg-color:          #EE5007;
+  --custom-btn-bg-hover-color:    #c01f27;
+  --dark-color:                   #000000;
+  --p-color:                      #717275;
+  --border-color:                 #7fffd4;
+  --link-hover-color:             #B22727;
+
+  --body-font-family:             'Outfit', sans-serif;
+
+  --h1-font-size:                 74px;
+  --h2-font-size:                 46px;
+  --h3-font-size:                 32px;
+  --h4-font-size:                 28px;
+  --h5-font-size:                 24px;
+  --h6-font-size:                 22px;
+  --p-font-size:                  18px;
+  --btn-font-size:                14px;
+  --copyright-font-size:          16px;
+
+  --border-radius-large:          100px;
+  --border-radius-medium:         20px;
+  --border-radius-small:          10px;
+
+  --font-weight-light:            300;
+  --font-weight-normal:           400;
+  --font-weight-bold:             700;
+}
+:root { 
+  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
+  --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #414c64; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #7F3E98; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+}
+
+/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+
+
 
 [data-homepage="false"] {
   --initHeaderBackground: rgba(255, 255, 255, 1)
 }
-
+.body{
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
 .dark {
   --initHeaderBackground: rgba(0, 0, 0, 0);
   --headerBackground: rgba(0, 0, 0, 0.9);
@@ -32,7 +79,7 @@
   display: flex;
   width: 100%;
   padding: 0;
-  /*! box-shadow: 0 0 6px 6px; */
+  /* box-shadow: 0 0 6px 6px; */
   background: rgba(0, 0, 0, 0);
   position: fixed;
   top: 0;
@@ -804,10 +851,22 @@ header .container .navigation ul li.column-3 {
 
 
 .bannerh2 h2 {
-  /* font-family: Poppins; */
-  font-weight: bold;
-  font-size: 60px;
-  color: #444F6B;
+  /* font-family: "Roboto"; */
+  font-weight: bolder;
+  font-size: 5.3rem;
+  text-align: center;
+  color: #ffffff;
+  filter: drop-shadow(3px 5px 4px #200438);
+
+}
+
+.bannerh2 span {
+  /* font-family: "Roboto"; */
+  font-weight: bolder;
+  font-size: 5.3rem;
+  text-align: center;
+  filter: drop-shadow(5px  #734B93);
+  color: #734B93;
 }
 
 .banner4 h3 {
@@ -820,17 +879,60 @@ header .container .navigation ul li.column-3 {
 
 .input {
   border: 1px solid #000;
-  width: 40%;
+  width: 100%;
   padding: 10px;
   margin: auto;
 }
+.footerend{
+  background-color: #7F3E98;
+  color: #fff;
+  padding: 10px;
 
-.checkbox {
+}
+.social-icon {
+  margin: 0;
+  padding: 0;
+}
+
+.social-icon-item {
+  list-style: none;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.social-icon-link {
+  background: var(--secondary-color);
+  border-radius: var(--border-radius-large);
+  font-size: var(--copyright-font-size);
+  display: block;
+  margin-right: 10px;
   text-align: center;
-  margin: auto ;
-  float: none !important;
+  width: 35px;
+  height: 35px;
+  line-height: 36px;
+  transition: background 0.2s, color 0.2s;
+}
 
+.social-icon-link:hover {
+  background: var(--primary-color);
+  color: var(--white-color);
+}
 
+.social-icon-link span {
+  display: block;
+}
+
+.social-icon-link span:hover::before{
+  animation: spinAround 2s linear infinite;
+}
+
+@keyframes spinAround {
+  from {
+    transform: rotate(0deg)
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .form-check-input {
@@ -838,24 +940,21 @@ header .container .navigation ul li.column-3 {
 
 
   float: none !important;
-  margin: auto !important;
+  
 
 }
 
 .btns2 {
-  width: 100px;
+  width: 150px;
   margin: auto;
-  padding: 15px;
-  border-radius: 20px;
-  background-color: #734B93;
+  padding: 10px;
+  border-radius: 25px;
+  background-color: #7F3E98;
   color: #fff;
 }
 
-.banner {
-  background: url(/public/video.mp4);
-  /* position: absolute !important; */
-  top: 0;
-
+.btns2:hover {
+  border: 2px solid #734B93;
 }
 
 @media (max-width:991px) {
@@ -911,15 +1010,28 @@ header .container .navigation ul li.column-3 {
     /* font-family: Poppins; */
     font-weight: bold;
     font-size: 35px;
-    color: #444F6B;
-    
+    color: #ffffff;
+    position: absolute;
+    z-index: 9999;
+    top: 20%;
   }
 
   .bannerh2 p {
     /* font-family: Poppins; */
     font-weight: normal;
     font-size: 20px;
-    color: #444F6B;
+    color: #ffffff;
+    position: absolute;
+    z-index: 9999;
+    text-align: center;
+    top: 40%;
+  }
+
+  .btns {
+    position: absolute;
+    z-index: 9999;
+    border: 2px solid #7F3E98 ;
+    background: transparent;
   }
 
   #section05 a {
@@ -935,7 +1047,7 @@ header .container .navigation ul li.column-3 {
   /* font-family: Poppins; */
   font-weight: normal;
   font-size: 20px;
-  color: #444F6B;
+  color: #ffffff;
 }
 
 .conatiner {
@@ -943,12 +1055,18 @@ header .container .navigation ul li.column-3 {
 }
 
 .btns {
-  background-color: #9578AD;
-  color: #fff;
-  border-radius: 20px;
-  padding: 10px;
+  /* border: 3px solid #7F3E98; */
   border: none;
-  width: 150px;
+  color: #7F3E98;
+  border-radius: 25px;
+  padding: 10px;
+  background: #fff;
+
+  display:flex;
+  margin: auto;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: bolder;
 }
 
 .banner {
@@ -980,7 +1098,6 @@ header .container .navigation ul li.column-3 {
   -webkit-transform: translate(0, -50%);
   transform: translate(0, -50%);
   color: #fff;
-  font: normal 400 20px/1 'Josefin Sans', sans-serif;
   letter-spacing: .1em;
   text-decoration: none;
   transition: opacity .3s;
@@ -1010,8 +1127,8 @@ header .container .navigation ul li.column-3 {
   width: 24px;
   height: 24px;
   margin-left: -12px;
-  border-left: 1px solid #000000;
-  border-bottom: 1px solid #000000;
+  border-left: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
   -webkit-animation: sdb05 1.5s infinite;
@@ -1097,9 +1214,367 @@ header .container .navigation ul li.column-3 {
   width: 1.5em;
   height: 1.5em;
 }
-.inputs{
-  width:39.5%;
+
+.inputs {
+  width: 39.5%;
   border: 1px solid #000;
   padding: 10px;
   margin: auto;
+}
+
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  padding: 80px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+
+.hero:before {
+  content: "";
+  background: color-mix(in srgb, var(--background-color), transparent 30%);
+  position: absolute;
+
+  z-index: 2;
+  color: #fff;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 3;
+}
+
+.hero h2 {
+  margin: 0;
+  font-size: 50px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.hero p {
+  margin: 10px 0 0 0;
+  font-size: 24px;
+  color: #fff;
+}
+
+.hero .btn-get-started {
+  color: var(--accent-color);
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  list-style: none;
+text-decoration: none;
+  background: #fff;
+  padding: 8px 40px;
+  margin: 30px 0 0 0;
+  border-radius: 50px;
+  transition: 0.5s;
+ 
+}
+#preloader {
+  display: flex;
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 99999;
+}
+
+#preloader:before,
+#preloader:after {
+  content: "";
+  background-color: #000000;
+  position: absolute;
+  inset: 0;
+  width: 50%;
+  height: 100%;
+  transition: all 0.3s ease 0s;
+  z-index: -1;
+}
+
+#preloader:after {
+  left: auto;
+  right: 0;
+}
+
+#preloader .line {
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+  width: 1px;
+  height: 280px;
+  transition: all 0.8s ease 0s;
+}
+
+#preloader .line:before {
+  content: "";
+  position: absolute;
+  background-color: #ffffff;
+  left: 0;
+  top: 50%;
+  width: 1px;
+  height: 0%;
+  transform: translateY(-50%);
+  animation: lineincrease 1000ms ease-in-out 0s forwards;
+}
+
+#preloader .line:after {
+  content: "";
+  position: absolute;
+  background-color: color-mix(in srgb, var(--default-color), transparent 95%);
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  transform: translateY(-100%);
+  animation: linemove 1200ms linear 0s infinite;
+  animation-delay: 2000ms;
+}
+
+#preloader.loaded .line {
+  opacity: 0;
+  height: 100% !important;
+}
+
+#preloader.loaded .line:after {
+  opacity: 0;
+}
+
+#preloader.loaded:before,
+#preloader.loaded:after {
+  animation: preloaderfinish 300ms ease-in-out 500ms forwards;
+}
+
+@keyframes lineincrease {
+  0% {
+    height: 0%;
+  }
+
+  100% {
+    height: 100%;
+  }
+}
+
+@keyframes linemove {
+  0% {
+    transform: translateY(200%);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes preloaderfinish {
+  0% {
+    width: 5 0%;
+  }
+
+  100% {
+    width: 0%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 40px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+}
+body {
+  font-family: sans-serif;
+}
+
+/* Hide the hover-video-player component until it's defined
+   and connected to avoid a weird unstyled flash of the slot contents */
+hover-video-player:not(:defined) {
+  display: none;
+}
+
+hover-video-player {
+  width: 100%;
+  display: block;
+}
+
+hover-video-player div[slot="paused-overlay"] {
+  color: white;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1em;
+  margin: 0;
+  z-index: 2;
+}
+
+.overlay-text h2 {
+  margin: 0;
+}
+
+hover-video-player div[slot="paused-overlay"]::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+hover-video-player div[slot="paused-overlay"] img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  object-fit: cover;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+hover-video-player div[slot="loading-overlay"] {
+  /* Loading overlay has semi-transparent background so the player
+      will be darkened while it's visible */
+  background-color: rgba(0, 0, 0, 0.7);
+  /* Center the spinner inside of the overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+hover-video-player div[slot="loading-overlay"] .loading-spinner {
+  width: 4em;
+  height: 4em;
+  border: 6px solid white;
+  border-radius: 50%;
+  border-color: white white transparent transparent;
+  animation: spin 1s linear infinite;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 2;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease-in-out;
+}
+
+.video-container:hover .overlay {
+  opacity: 1; /* Show on hover */
+}
+
+.overlay h2 {
+  font-size: 50px;
+  margin-bottom: 1rem;
+}
+
+.overlay p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.overlay button {
+  padding: 0.5rem 1rem;
+
+  border: none;
+  color: var(--accent-color);
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* Play video on hover */
+.video-container:hover video {
+  animation: play 0s; /* Ensure the video starts playing when hovered */
+}
+
+@keyframes play {
+  from { /* empty */ }
+  to { /* empty */ }
+}
+@media (max-width:991px) {
+  .video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .banner-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    color: white;
+    z-index: 2;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .overlay h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .overlay p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .overlay .btns {
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .overlay .btns:hover {
+    background-color: #0056b3;
+  }
+  
 }

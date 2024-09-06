@@ -20,3 +20,14 @@
   margin: 0;
   font-size: 1rem; /* Adjust the font size as needed */
 }
+@media (max-width:991px) {
+  .text-overlay h2 {
+    margin: 0;
+    font-size:30px; /* Adjust the font size as needed */
+  }
+  
+  .text-overlay p {
+    margin: 0;
+    font-size: 1rem; /* Adjust the font size as needed */
+  }
+}
