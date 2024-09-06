@@ -4,16 +4,9 @@ import Header from '../components/Header'
 import { useMediaQuery } from 'react-responsive'
 import AOS from 'aos';
 import $ from 'jquery'
-import "@fontsource/roboto";
-import "@fontsource/roboto/400.css";
-import HoverVideoPlayer from 'hover-video-player';
-import Cookies from "js-cookie";
-import "@fontsource/roboto/400-italic.css";
 window.jquery = window.$ = $
 
 const Landingpage = () => {
-
-
     const Desktop = ({ children }) => {
         const isDesktop = useMediaQuery({ minWidth: 992 })
         return isDesktop ? children : null
@@ -205,14 +198,7 @@ const Landingpage = () => {
         return () => {
             $(document).off("ready", handleDocumentReady);
         };
-
     }, []);
-
-
-
-
-
-
 
     return (
         <>
