@@ -853,7 +853,7 @@ header .container .navigation ul li.column-3 {
 .bannerh2 h2 {
   /* font-family: "Roboto"; */
   font-weight: bolder;
-  font-size: 5.3rem;
+  font-size: 6rem;
   text-align: center;
   color: #ffffff;
   filter: drop-shadow(3px 5px 4px #200438);
@@ -863,7 +863,7 @@ header .container .navigation ul li.column-3 {
 .bannerh2 span {
   /* font-family: "Roboto"; */
   font-weight: bolder;
-  font-size: 5.3rem;
+  font-size: 4rem;
   text-align: center;
   filter: drop-shadow(5px  #734B93);
   color: #734B93;
@@ -1386,7 +1386,7 @@ text-decoration: none;
   }
 
   .hero p {
-    font-size: 18px;
+    font-size: 22px;
   }
 }
 body {
